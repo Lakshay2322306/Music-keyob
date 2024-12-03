@@ -1,4 +1,3 @@
-
 import os
 from telebot import TeleBot
 from yt_dlp import YoutubeDL
@@ -11,16 +10,17 @@ if not BOT_TOKEN:
 
 bot = TeleBot(BOT_TOKEN)
 
-# yt-dlp options with cookiefile support for headless environments
+# yt-dlp options
 ydl_opts = {
     'format': 'bestaudio/best',
     'outtmpl': '%(title)s.%(ext)s',
-    'cookiefile': 'cookies.txt',  # Cookies must be pre-generated
+    # Uncomment the following if you are using cookies.txt:
+    # 'cookiefile': 'cookies.txt',
 }
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-    bot.reply_to(message, "🎵 Welcome to the Music Bot! 🎵\n"
+    bot.reply_to(message, "🎵 Welcome to the Music Bot! 🎵\\n"
                           "Send me the name of a song, and I'll fetch it for you!")
 
 @bot.message_handler(func=lambda message: True)
