@@ -1,17 +1,17 @@
-# Music Bot for Telegram on Glitch
+# Music Bot for Telegram on Railway
 
-This bot allows users to search for and download music using yt-dlp.
+This bot allows users to search for and download music from YouTube using `yt-dlp`.
 
 ## Features
-- Download music from YouTube.
-- Easy to deploy on Glitch.
+- No cookies required.
+- Works with public YouTube videos.
+- Simple and lightweight.
+
+## Setup
+1. Add your Telegram bot token as an environment variable named `BOT_TOKEN`.
+2. Deploy the bot on Railway.
 
 ## Environment Variables
 | Variable   | Description                       | Example                      |
 |------------|-----------------------------------|------------------------------|
 | `BOT_TOKEN`| Your Telegram bot token          | `123456:ABC-DEF1234ghIkl...` |
-
-## How to Run on Glitch
-1. Fork this project on Glitch.
-2. Add your `BOT_TOKEN` as an environment variable in `.env`.
-3. Start the bot, and it will run continuously.
